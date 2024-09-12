@@ -3123,9 +3123,9 @@ static void forStatement(Compiler* compiler)
 static void ifStatement(Compiler* compiler)
 {
   // Compile the condition.
-  consume(compiler, TOKEN_LEFT_PAREN, "Expect '(' after 'if'.");
+  //consume(compiler, TOKEN_LEFT_PAREN, "Expect '(' after 'if'.");
   expression(compiler);
-  consume(compiler, TOKEN_RIGHT_PAREN, "Expect ')' after if condition.");
+  //consume(compiler, TOKEN_RIGHT_PAREN, "Expect ')' after if condition.");
   
   // Jump to the else branch if the condition is false.
   int ifJump = emitJump(compiler, CODE_JUMP_IF);
