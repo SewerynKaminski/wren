@@ -3055,7 +3055,7 @@ static void forStatement(Compiler* compiler)
   // Create a scope for the hidden local variables used for the iterator.
   pushScope(compiler);
 
-  consume(compiler, TOKEN_LEFT_PAREN, "Expect '(' after 'for'.");
+  //consume(compiler, TOKEN_LEFT_PAREN, "Expect '(' after 'for'.");
   consume(compiler, TOKEN_NAME, "Expect for loop variable name.");
 
   // Remember the name of the loop variable.
@@ -3085,7 +3085,7 @@ static void forStatement(Compiler* compiler)
   null(compiler, false);
   int iterSlot = addLocal(compiler, "iter ", 5);
 
-  consume(compiler, TOKEN_RIGHT_PAREN, "Expect ')' after loop expression.");
+  //consume(compiler, TOKEN_RIGHT_PAREN, "Expect ')' after loop expression.");
 
   Loop loop;
   startLoop(compiler, &loop);
