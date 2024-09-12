@@ -3157,9 +3157,9 @@ static void whileStatement(Compiler* compiler)
   startLoop(compiler, &loop);
 
   // Compile the condition.
-  consume(compiler, TOKEN_LEFT_PAREN, "Expect '(' after 'while'.");
+  //consume(compiler, TOKEN_LEFT_PAREN, "Expect '(' after 'while'.");
   expression(compiler);
-  consume(compiler, TOKEN_RIGHT_PAREN, "Expect ')' after while condition.");
+  //consume(compiler, TOKEN_RIGHT_PAREN, "Expect ')' after while condition.");
 
   testExitLoop(compiler);
   loopBody(compiler);
