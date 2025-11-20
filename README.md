@@ -1,4 +1,4 @@
-## Wren is a small, fast, class-based concurrent scripting language
+## Wrenless is a small, fast, class-based concurrent scripting language
 
 Think Smalltalk in a Lua-sized package with a dash of Erlang and wrapped up in
 a familiar, modern [syntax][].
@@ -16,7 +16,7 @@ var adjectives = Fiber.new {
   ["small", "clean", "fast"].each {|word| Fiber.yield(word) }
 }
 
-while (!adjectives.isDone) System.print(adjectives.call())
+while !adjectives.isDone {System.print(adjectives.call())}
 ```
 
  *  **Wren is small.** The VM implementation is under [4,000 semicolons][src].
